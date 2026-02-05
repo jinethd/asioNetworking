@@ -15,7 +15,7 @@ private:
             [this, self](boost::system::error_code ec, std::size_t length) {
                 if (!ec) {
                     std::cout << "[Server] Echoing: " << std::string(data_, length);
-                    do_write(length);
+                    do_write(length+1);
                 }
             });
     }
